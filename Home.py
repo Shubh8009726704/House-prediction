@@ -7,7 +7,11 @@ import matplotlib.pyplot as plt
 st.set_page_config(
     page_title= 'Home',    
 )
-st.title('Predicting the price of a house in Ramanthapur(Hyderabad)')
+ st.markdown("""
+    <div style="background-color:Blue;padding:10px">
+        <h2 style="color:Black;text-align:center;">Predicting the price of a house in Ramanthapur(Hyderabad)</h2>
+    </div>
+    """, unsafe_allow_html=True)
 st.markdown('Model to predict the price of a house based on its features')
 
 st.header('House features')
@@ -34,6 +38,10 @@ if st.button("Predict Price of House"):
     data = pd.DataFrame(data.reshape(-1, len(data)), columns=['area', 'bedrooms', 'bathrooms', 'stories', 'parking','mainroad', 'guestroom', 'basement', 'hotwaterheating', 'airconditioning', 'prefarea', 'furnishingstatus'])
     st.write(data)
     prediction = predict(data)
-    st.header('Predicted price of house is : ' + str(round(prediction[0],2)))
+     st.markdown("""
+    <div style="background-color:Green;padding:10px">
+        <h2 style="color:Black;text-align:center;">'Predicted price of house is : ' + str(round(prediction[0],2))</h2>
+    </div>
+    """, unsafe_allow_html=True)
     
 
