@@ -7,8 +7,10 @@ import matplotlib.pyplot as plt
 st.set_page_config(
     page_title= 'Home',    
 )
-st.title('Predicting the price of a house in Ramanthapur(Hyderabad)')
-st.markdown('Model to predict the price of a house based on its features')
+if st.sidebar.button('Home'):
+    st.markdown('''<h1 style='color:black;background:yellow;padding:15px;border-radius:10px'>Predicting the price of a house in Ramanthapur(Hyderabad).</h1>''',unsafe_allow_html=True)
+
+    st.markdown('''<h3>Model to predict the price of a house based on its features</h3>''',unsafe_allow_html=True)
 
 st.header('House features')
 col1, col2, col3, col4= st.columns(4)
@@ -34,6 +36,16 @@ if st.button("Predict Price of House"):
     data = pd.DataFrame(data.reshape(-1, len(data)), columns=['area', 'bedrooms', 'bathrooms', 'stories', 'parking','mainroad', 'guestroom', 'basement', 'hotwaterheating', 'airconditioning', 'prefarea', 'furnishingstatus'])
     st.write(data)
     prediction = predict(data)
-    st.header('Predicted price of house is : ' + str(round(prediction[0],2)))
+    st.header('Predicted price of house is : Rs. ' + str(round(prediction[0],2)))
     
+st.success('Note : If you are facing any problem related to my App contact with me.')
+
+if st.sidebar.button('Contact us'):
+    st.write('<h4>Name : Shubham Sharma</h4>',unsafe_allow_html=True)
+    st.write('<h4>Email ID : shbh8055@gmail.com</h4>',unsafe_allow_html=True)
+    st.write('<h4>Mobile No : 8112301399</h4>',unsafe_allow_html=True)
+    st.write('<h4>Address : Ramanthapur Hyderabad 500013</h4>',unsafe_allow_html=True)
+    
+if st.sidebar.button('About Me'):
+    st.markdown('''<h3 style='text-align:justify;color:blue'>Hey guys, My name is Shubham Sharma.I am student of Advanced Diploma and Information Technology(ADIT) from Ramanthapur(Hyderabad) and I am a Web Developer.</h3>''',unsafe_allow_html=True)
 
