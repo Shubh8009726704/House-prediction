@@ -7,12 +7,13 @@ import matplotlib.pyplot as plt
 st.set_page_config(
     page_title= 'Home',    
 )
-if st.title('Home'):
-    st.markdown('''<h1 style='color:black;background:yellow;padding:15px;border-radius:10px'>Predicting the price of a house in Ramanthapur(Hyderabad).</h1>''',unsafe_allow_html=True)
 
-    st.markdown('''<h3>Model to predict the price of a house based on its features</h3>''',unsafe_allow_html=True)
-    st.header('House features')
-    col1, col2, col3, col4= st.columns(4)
+st.markdown('''<h1 style='color:black;background:yellow;padding:15px;border-radius:10px'>Predicting the price of a house in Ramanthapur(Hyderabad).</h1>''',unsafe_allow_html=True)
+
+st.markdown('''<h3>Model to predict the price of a house based on its features</h3>''',unsafe_allow_html=True)
+
+st.header('House features')
+col1, col2, col3, col4= st.columns(4)
 with col1:
     area = st.slider('Area: ', 1650, 16200, 50)
     bedrooms = st.radio('No. of bedrooms: ', [1, 2, 3, 4, 5, 6],horizontal=True)
@@ -37,6 +38,5 @@ if st.button("Predict Price of House"):
     prediction = predict(data)
     st.header('Predicted price of house is : Rs. ' + str(round(prediction[0],2)))
     
-st.success('Note : If you are facing any problem related to my App contact with me.')
 
 
