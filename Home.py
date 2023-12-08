@@ -41,10 +41,10 @@ if st.button("Predict Price of House"):
 st.success('Note : If you are facing any problem related to my App contact with me.')
 
 if st.sidebar.button('Contact us'):
-    st.write('<h4>Name : Shubham Sharma</h4>',unsafe_allow_html=True)
-    st.write('<h4>Email ID : shbh8055@gmail.com</h4>',unsafe_allow_html=True)
-    st.write('<h4>Mobile No : 8112301399</h4>',unsafe_allow_html=True)
-    st.write('<h4>Address : Ramanthapur Hyderabad 500013</h4>',unsafe_allow_html=True)
+    st.write('<h2>Name : Shubham Sharma</h2>',unsafe_allow_html=True)
+    st.write('<h>Email ID : shbh8055@gmail.com</h2>',unsafe_allow_html=True)
+    st.write('<h2>Mobile No : 8112301399</h2>',unsafe_allow_html=True)
+    st.write('<h2>Address : Ramanthapur Hyderabad 500013</h2>',unsafe_allow_html=True)
     
 if st.sidebar.button('About Me'):
     st.markdown('''<h3 style='text-align:justify;color:blue'>Hey guys, My name is Shubham Sharma.I am student of Advanced Diploma and Information Technology(ADIT) from Ramanthapur(Hyderabad) and I am a Web Developer.</h3>''',unsafe_allow_html=True)
